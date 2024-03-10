@@ -8,7 +8,9 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: #081b29;
+    background-image: url(./image/8.jpg);
+    background-size: cover;
+    background-position: center;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -17,16 +19,24 @@ body{
 /*!delete*/
 ::-webkit-input-placeholder{
     color: #eee;
+    transition: 1s;
 }
 
 .home {
     position: relative;
-    width: 800px;
+    width: 65vh;
     height: 65vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid #00ffff;
     box-shadow: 0 0 50px 0 #00a6bc;
+    background: transparent;
+    backdrop-filter: blur(0px);
+}
+
+.home:hover {
+    backdrop-filter: blur(5px);
 }
 
 .form{
