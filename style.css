@@ -1,3 +1,8 @@
+:root {
+    --main-color: #00ffff;
+    --second-color: #0ef;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +23,7 @@ body{
 
 /*!delete*/
 ::-webkit-input-placeholder{
-    color: #eee;
+    color: #eeeeee;
     transition: 1s;
 }
 
@@ -29,7 +34,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #00ffff;
+    border: 3px solid var(--main-color);
     border-radius: 30px;
     box-shadow: 0 0 50px 0 #00a6bc;
     background: transparent;
@@ -37,29 +42,30 @@ body{
 }
 
 .home:hover {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     transition: .9s;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 500px) {
+    .home {
+        width: 40vh;
+    }
 }
 
-.title{
+.form .title{
+    display: flex;
+    justify-content: center;
     font-size: 35px;
     font-style: italic;
-    color: #00ffff;
+    color: var(--main-color);
 }
 
-.inputs{
+.form .inputs{
     padding-bottom: 10px;
-    border-bottom: 2px solid #00ffff;
+    border-bottom: 2px solid var(--main-color);
 }
 
-.input{
+.form .input{
     border: none;
     outline: none;
     background: none;
@@ -67,29 +73,48 @@ body{
     margin-top: 40px;
     padding-right: 10px;
     font-size: 17px;
-    color: #00ffff;
+    color: var(--main-color);
 }
 
-.submit{
+.form .remember {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.form .remember a {
+    text-decoration: none;
+    color: var(--second-color)
+}
+
+.form .remember a:hover , .footer a:hover{
+    text-decoration: underline;
+}
+
+.form .submit{
     border: none;
     outline: none;
     width: 288px;
-    margin-top: 25px;
+    margin-top: 12px;
     padding: 10px 0;
     font-size: 20px;
     border-radius: 40px;
     letter-spacing: 1px;
     cursor: pointer;
-    background: linear-gradient(45deg, #0ef, #c800ff);
+    background: linear-gradient(45deg, var(--second-color), #c800ff);
 }
 
 .footer{
     margin-top: 30px;
     letter-spacing: 0.5px;
     font-size: 14px;
+    text-align: center;
 }
 
-.link{
-    color: #0ef;
+.footer a{
+    color: var(--second-color);
     text-decoration: none;
+    font-size: large;
 }
